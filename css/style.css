@@ -1,0 +1,361 @@
+/* ১. সার্বিক টেক্সটের জন্য ফন্ট সেট করা (আইকন ক্লাসগুলো বাদে) */
+body, h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea, li, div:not(.fa, .fas, .far, .fab, .fa-solid, .fa-regular, .fa-brands) {
+    font-family: 'Tiro Bangla', serif !important;
+}
+
+/* ২. ফন্ট সামসন আইকনগুলোকে নিজেদের ফন্ট ব্যবহার করতে বাধ্য করা */
+.fa, .fas, .far, .fab, .fa-solid, .fa-regular, .fa-brands, [class*="fa-"] {
+    font-family: "Font Awesome 6 Free", "Font Awesome 5 Free", "FontAwesome" !important;
+}
+/* ==================================================
+   VARIABLES & BRANDING
+   ================================================== */
+:root {
+    --primary-blue: #0540A4;
+    --dark-blue: #062B70;
+    --light-blue: #EAF2FF;
+    --white: #FFFFFF;
+    --text-color: #1F2937;
+    --font-family: 'Hind Siliguri', sans-serif;
+}
+
+
+
+
+body {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-color: #FAFAFA;
+    line-height: 1.6;
+}
+
+/* ==================================================
+   COMMON UTILITIES & BUTTONS
+   ================================================== */
+.text-primary-blue { color: var(--primary-blue) !important; }
+.text-dark-blue { color: var(--dark-blue) !important; }
+.bg-primary-blue { background-color: var(--primary-blue) !important; }
+.bg-dark-blue { background-color: var(--dark-blue) !important; }
+.bg-light-blue { background-color: var(--light-blue) !important; }
+
+.max-w-700 { max-width: 700px; }
+.min-w-80 { min-width: 80px; }
+
+.section-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.btn-primary-custom {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    border: none;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+.btn-outline-custom {
+    border: 2px solid var(--primary-blue);
+    color: var(--primary-blue);
+    background: transparent;
+    padding: 10px 26px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-custom:hover {
+    background-color: var(--primary-blue);
+    color: var(--white);
+}
+
+/* ==================================================
+   ANNOUNCEMENT BAR & NAVBAR
+   ================================================== */
+.announcement-bar {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    font-size: 0.95rem;
+}
+
+
+/* 
+.brand-logo {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+}
+
+.custom-navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.custom-navbar .nav-link {
+    color: var(--text-color);
+    font-weight: 500;
+    margin: 0 6px;
+    transition: color 0.2s ease;
+}
+
+.custom-navbar .nav-link:hover {
+    color: var(--primary-blue);
+} */
+
+.brand-logo {
+    height: 45px;
+    width: auto;
+    object-fit: contain;
+}
+
+.brand-text {
+    line-height: 1.1;
+}
+
+.brand-title {
+    color: #0540A4 !important;
+    letter-spacing: -0.5px;
+}
+
+.brand-subtitle {
+    color: #062B70 !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85rem !important;
+}
+
+.custom-navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.custom-navbar .nav-link {
+    color: var(--text-color);
+    font-weight: 500;
+    margin: 0 6px;
+    transition: color 0.2s ease;
+}
+
+.custom-navbar .nav-link:hover {
+    color: var(--primary-blue);
+}
+
+/* ==================================================
+   HERO SECTION
+   ================================================== */
+.hero-section {
+    background: linear-gradient(135deg, #FFFFFF 0%, var(--light-blue) 100%);
+}
+
+.badge-custom {
+    background-color: var(--light-blue);
+    color: var(--primary-blue);
+    font-size: 0.9rem;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-weight: 600;
+}
+
+.hero-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--dark-blue);
+    line-height: 1.25;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: var(--primary-blue);
+    font-weight: 600;
+}
+
+.hero-text {
+    font-size: 1.1rem;
+    color: #4B5563;
+}
+
+.card-badge {
+    display: inline-block;
+    background-color: #FEF3C7;
+    color: #92400E;
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 50px;
+}
+
+/* ==================================================
+   FEATURE & PROBLEM CARDS
+   ================================================== */
+.problem-card, .feature-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.problem-card:hover, .feature-card:hover {
+    transform: translateY(-50px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+.solution-icon {
+    width: 48px;
+    height: 48px;
+    background-color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+/* ==================================================
+   ACCORDION & MODAL STYLES
+   ================================================== */
+.custom-accordion .accordion-button:not(.collapsed) {
+    background-color: var(--light-blue);
+    color: var(--primary-blue);
+    box-shadow: none;
+}
+
+.custom-accordion .accordion-button:focus {
+    box-shadow: none;
+}
+
+/* Responsive Overrides */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    .section-title {
+        font-size: 1.75rem;
+    }
+}
+
+/* ==================================================
+   DEMO CLASS SECTION STYLES
+   ================================================== */
+.demo-video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    background-color: #000;
+}
+
+.demo-video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+/* ==================================================
+   DEMO CLASS SECTION STYLES
+   ================================================== */
+.demo-video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    background-color: #000;
+}
+
+.demo-video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* ==================================================
+   ROADMAP CORPORATE SECTION STYLES
+   ================================================== */
+.title-line {
+    width: 40px;
+    height: 3px;
+    background-color: #0540A4;
+    border-radius: 2px;
+}
+
+.roadmap-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eef2f6 !important;
+    background-color: #ffffff;
+}
+
+.roadmap-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08) !important;
+}
+
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-blue { background-color: #e8f1ff; }
+.icon-green { background-color: #e6f7ed; }
+.icon-purple { background-color: #f3e8ff; }
+.icon-orange { background-color: #fff3e0; }
+
+.text-purple { color: #8e24aa !important; }
+
+.roadmap-list li {
+    font-size: 0.85rem;
+    color: #4a5568;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+}
+
+/* Outcome Box Styling */
+.fs-7 { font-size: 0.82rem; }
+
+.outcome-box {
+    border-radius: 12px;
+}
+.outcome-blue { background-color: #f0f5ff; }
+.outcome-green { background-color: #f0fdf4; }
+.outcome-purple { background-color: #faf5ff; }
+.outcome-orange { background-color: #fff8f0; }
+
+.roadmap-footer-bar {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.max-w-800 {
+    max-width: 800px;
+}
+.icon-box {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* সার্চ বক্সে যা টাইপ করবেন তার কালার স্পষ্ট সাদা */
+.custom-input {
+    color: #ffffff !important;
+    background-color: #121212 !important;
+}
+
+/* প্লেসহোল্ডারের (enter your student id) লেখাটির কালার হালকা দৃশ্যমান সাদা */
+.custom-input::placeholder {
+    color: #b0b0b0 !important;
+    opacity: 1 !important;
+    text-transform: none !important; /* প্লেসহোল্ডারের ছোট হাতের লেখা ঠিক রাখার জন্য */
+}
